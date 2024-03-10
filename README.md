@@ -1,2 +1,3 @@
-# DoSom-
-An application for enhancing our productivity, efficiency, effectiveness in our daily life. helping us making a step toward our goal as much as possible everyday.
+# Dosom' App
+
+A mobile app to help we people to not remain idle every day but help us to accomplish something at least each day that step us forward in ours goal. It will make us efficient, efficace and growing.
