@@ -1,0 +1,96 @@
+<CheckItem>
+    adaptive_height: True
+
+    MDCheckbox:
+        id: checkbox
+        size_hint: None, None
+        size: "30dp", "30dp"
+
+    MDLabel:
+        text: root.text
+        adaptive_height: True
+        pos_hint: {"center_y": .5}
+        color: root.color
+        font_size: "12sp"
+        font_name: kivy.resources.resource_find("frontend/src/components/fonts/Poppins-Regular.ttf")
+
+<TextIconButtonItem>
+    adaptive_height: True 
+
+    MDLabel:
+        halign: "center"
+        text: "Save and continue"
+        
+    MDIconButton:
+        icon: "arrow-right"
+        style: "filled"
+        adaptive_height: True
+
+<FirstScreen>
+
+    FloatLayout:
+        size: root.width, root.height 
+
+        Label:
+            text: "One step forward\nevery day"
+            halign: "left"
+            font_size: "18sp"
+            #theme_text_color: "Custom"
+            #text_color: app.theme_cls.primary_color
+            pos_hint: {"center_x": .5, "center_y": .80}
+            font_name: kivy.resources.resource_find("frontend/src/components/fonts/Poppins-Regular.ttf")
+        Label:
+            text: "select among these days your busy days.\ne.g busy day: having class, going to work, etc...\nyour unbusy days will be the unselected ones."
+            halign: "left"
+            #padding: []
+            font_size: "12sp"
+            font_name: kivy.resources.resource_find("frontend/src/components/fonts/Poppins-Regular.ttf")
+            pos_hint: {"center_x": .5, "center_y": .60}
+
+        MDBoxLayout:
+            orientation: "vertical"
+            adaptive_height: True
+            size_hint_x: ".45dp"
+            size_hint_y: ".35dp"
+            pos_hint: {"center_x": .38, 'center_y': .37}
+            md_bg_color: [0, 0, 0, 0]
+
+            CheckItem:
+                id: mondayitem
+                text: "Monday"
+            CheckItem:
+                id: tuesdayitem
+                text: "Tuesday"
+            CheckItem:
+                id: wednesdayitem
+                text: "Wednesday"
+            CheckItem:
+                id: thursdayitem
+                text: "Thursday"
+            CheckItem:
+                id: fridayitem
+                text: "Friday"
+            CheckItem:
+                id: saturdayitem
+                text: "Saturday"
+            CheckItem:
+                id: sundayitem
+                text: "Sunday"
+
+        MDCheckbox:
+            size_hint: None, None
+            size: "30dp", "30dp"
+            on_release: root.AddToBusyDaysList()
+            
+
+        MDBoxLayout:
+            orientation: "vertical"
+            adaptive_height: True
+            size_hint_x: ".6dp"
+            size_hint_y: ".08dp"
+            pos_hint: {"center_x": .5, "center_y": .1}
+
+            TextIconButtonItem:
+                pos_hint: {"center_x": .5, "center_y": .5}
+
+ 
